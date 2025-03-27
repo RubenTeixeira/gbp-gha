@@ -23,7 +23,7 @@ jobs:
 
   build-native:
     name: ${{ matrix.distro }} native
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
 
     strategy:
       matrix:
