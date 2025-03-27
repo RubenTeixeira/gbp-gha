@@ -27,12 +27,12 @@ jobs:
 
     strategy:
       matrix:
-        platform: [ linux/amd64, linux/arm64, linux/arm/v5, linux/arm/v6, linux/arm/v7, linux/386, darwin/amd64, darwin/arm64, windows/amd64, windows/386 ]
-        #include:
-          #- container: "ubuntu:latest"
-           # distro: "ubuntu_latest"
-          #- container: "debian:latest"
-          #  distro: "debian_latest"
+        platform: [ linux/amd64, linux/arm64, linux/arm/v5, linux/arm/v6, linux/arm/v7, linux/386 ]
+        include:
+          - container: "ubuntu:latest"
+            distro: "ubuntu_latest"
+          - container: "debian:latest"
+            distro: "debian_latest"
 
     container:
       image: ${{ matrix.container }}
